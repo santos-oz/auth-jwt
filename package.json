@@ -1,0 +1,13 @@
+{
+  "name": "auth-jwt",
+  "version": "1.0.0",
+  "description": "Autenticação de usuários",
+  "main": "serve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Matheus Santos",
+  "license": "ISC",
+   "type": "module"
+  }
