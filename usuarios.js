@@ -1,4 +1,4 @@
-const usuario = [
+const usuarios = [
     {id: 1,
         username: "user1",
         password: "12345678",
@@ -18,4 +18,4 @@ const usuario = [
     }
 ];
 
-export default usuario; // para exportar o array de usuários para outros arquivos
+export default usuarios; // para exportar o array de usuários para outros arquivos
