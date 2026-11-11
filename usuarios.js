@@ -18,4 +18,5 @@ const usuarios = [
     }
 ];
 
+
 export default usuarios; // para exportar o array de usuários para outros arquivos
