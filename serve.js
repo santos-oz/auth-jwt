@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 import usuarios from "./usuarios.js"; // importando o array de usuários do arquivo usuario.js
 import "dotenv/config"; // importando o dotenv para acessar as variáveis de ambiente
 
+
 const app = express();
 const PORT = process.env.PORT; // porta do servidor
 const SECRET_KEY = process.env.SECRET_KEY;
@@ -63,6 +64,14 @@ app.get("/admin", autenticateToken, (req, res) => {
   }
   res.status(200).json({message: "Área de administrador"}) // se o usuário for admin, retorna uma mensagem de sucesso com status 200
 });
+
+app.get("/owner", autenticateToken, (req, res) => {
+  if (req.user.role !== "owner") {
+    return res.status(403).json({ message:"Acesso negado." });} // se o usuário não for admin, retorna uma mensagem de erro com status 403
+    res.status(200).json({message: "Área de OWNER"}) // se o usuário for admin, retorna uma mensagem de sucesso com status 200
+  });
+
+
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`); // mensagem de sucesso ao iniciar o servidor

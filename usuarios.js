@@ -18,5 +18,25 @@ const usuarios = [
     }
 ];
 
+const owner =[
+     {id: 4,
+        ownername: "owner1",
+        password: "1234567",
+        role: "demitido",
+    },
+
+    {id: 5,
+        ownername: "owner2",
+        password: "1234567",
+        role: "demitido",
+    },
+
+    {id: 6,
+        ownername: "owner3",
+        password: "1234567",
+        role: "user",
+    }
+];
+
 
 export default usuarios; // para exportar o array de usuários para outros arquivos
